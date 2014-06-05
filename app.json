@@ -1,0 +1,17 @@
+{
+	"reponame":"sample-anime",
+	"title":"MEJORES ANIMES!!!",
+	"abbr":"MEJORESANIMES",
+	"tooltip":"[App Starter Ready] A simple multi-page app that uses the App Framework UI Library.",
+	"description":"[App Starter Ready] A simple multi-page app that uses the App Framework UI Library.",
+	"articleurl":"http://software.intel.com/en-us/html5/articles/using-the-intel-app-starter-to-create-a-mobile-application",
+    	"screenshotUrl":"",
+    	"iconUrl":"",
+	"highlights":["App Starter", "App Framework"],
+    	"keywords":["App Starter", "App Framework"],
+	"visible": "true",
+	"apppreview":"true",
+	"type":"appstarter",
+	"appname":"demo.anime",
+	"relname":"4.0.0"
+}

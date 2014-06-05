@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html><!--HTML5 doctype-->
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+<script src="cordova.js"></script>
+<script src="xhr.js"></script>
+<script type="text/javascript" language="javascript">
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
+    $.ui.autoLaunch = false;
+    $.ui.useOSThemes = true; //Change this to false to force a device theme
+    $.ui.blockPageScroll();
+    $(document).ready(function () {
+        if ($.ui.useOSThemes && !$.os.ios && $("#afui").get(0).className !== "ios")
+            $("#afui").removeClass("ios");
+    });
+</script>
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">
+</head>
+
+<div id="afui" class="ios">
+    <div id="header" class="header"></div>
+    <div id="content" style="">
+        <div class="panel" title="Home" id="home" selected="selected" style="" data-appbuilder-object="page"
+        data-header="header_0">
+
+
+            <div class="grid" data-appbuilder-object="grid3" style="z-index: 0;">
+
+
+
+            </div>
+            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+
+
+
+
+
+                <img src="images/winke.png" style="width: 298px; height: 450px; display: block; margin: 0px auto;"
+                alt="Title" data-appbuilder-object="image" class="" title="">
+                <div class="container" style="width:100%" data-appbuilder-object="container"></div>
+                <div class="container" style="width:100%" data-appbuilder-object="container"></div>
+            </div>
+        </div>
+        <div class="panel" title="One Piece" id="page_1" data-appbuilder-object="page"
+        data-footer="footer_1" style="" data-nav="nav_0">
+
+            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+                <img src="images/onepiece2.jpg" style="width: 100%; height: 100%;" alt="Title"
+                data-appbuilder-object="image" class="" title="">
+
+                <div class="text_item" data-appbuilder-object="text" style="">Hubo un tiempo en que los piratas controlaban los mares. Numerosas
+                    bandas de piratas zarpaban al mar en busca del One Piece, el
+                    tesoro que dejo el hombre conocido como el Rey de los Piratas,
+                    Gold D. Roger. Un joven que admiraba a los piratas llamado
+                    Monkey D. Luffy, quien a los 7 años se comio una Akuma no mi
+                    (convirtiendose en un hombre de goma), inspirado por el pirata
+                    Shanks, sale al mar para convertirse en el Rey de los Piratas
+                    y obtener el One Piece... En su viaje, Monkey D. Luffy derrotará
+                    a gran cantidad de adversarios. Además, irá conociendo a otros
+                    personajes, de los cuales, algunos se unirán a él como miembros
+                    de su tripulación mientras que otros lo ayudarán por un tiempo,
+                    convirtiendose en valiosas amistades. One Piece se estrenó
+                    en Japón por Fuji TV el 20 de octubre de 1999. Lleva mas de
+                    10 años y es uno de los mejores animes que he visto.</div>
+            </div>
+        </div>
+        <div class="panel" title="Dead Note" id="page_2" data-appbuilder-object="page"
+        style="" data-footer="footer_2" data-nav="nav_0">
+
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/DeathNote.jpg" style="width: 298px; height: 298px;" alt="Title"
+                data-appbuilder-object="image" class="" title="">
+
+                <div class="text_item" data-appbuilder-object="text">Cuando Light Yagami, un estudiante de secundaria, encuentra tirado
+                    en el suelo, al salir del instituto, un cuaderno, comenzará
+                    la historia más tenebrosa y enrvesada que hasta ahora había
+                    visto. El cuaderno, o Death note, es un libro en blanco, donde
+                    solo vienen escritas las normas para utilizarlo. Según ellas,
+                    cada vez que escribas en sus páginas el nombre de una persona,
+                    mientras visualizas su rostro, provocarás su muerte inevitable
+                    en cuestión de segundos. Este cuaderno, un arma mortal e indetectable
+                    a los ojos de los investigadores, se convertirá en el juguete
+                    de las diabólicas mentes de aquellos que lo consigan... Solo
+                    una persona será capaz de vislumbrar la realidad que se esconde
+                    tras el malévolo cuaderno, un inteligentísimo muchacho al que
+                    todos terminaréis adorando.... Serie grande entre las grandes.</div>
+            </div>
+        </div>
+        <div class="panel" title="Naruto Shipuden" data-footer="footer_3" id="page_3" data-appbuilder-object="page"
+        style="" data-nav="nav_0">
+
+            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+                <img src="images/narutoShip.jpg" style="width: 100%; height: 90%;" alt="Title"
+                data-appbuilder-object="image" class="" title="">
+
+                <div class="text_item" data-appbuilder-object="text">Pasan dos años después de que Naruto y Sakura se fueran a entrenar
+                    cada uno con su maestro sannin, en este caso, Naruto se fue
+                    con Jiraya y Sakura con Tsunade. Ya tienen 14 años y son unos
+                    geniales ninjas, Naruto ha aprendido muchas técnicas nuevas
+                    y ha perfeccionado el Kage Bunshin aparte de otras que ya las
+                    verán a lo largo de la serie, más una técnica secreta. Sakura
+                    ha aprendido todo sobre la medicina ninja, y se ha convertido
+                    en una ninja médico. Los otros personajes sin olvidarlos, también
+                    han evolucionado subiendo de rango de ninja (todos menos Naruto)
+                    y también los temas amorosos, Shikamaru ya tiene novia. Pero
+                    durante esos 2 años, los Akatsuki se han preparado para lo
+                    que viene. Empiezan a mover ficha yendo a buscar a los 9 demonios
+                    de chakra legendario (Kyubi, Shukaku de la arena y siete más)
+                    pues en esta segunda temporada, lo que va a tener mucha importancia
+                    serán los demonios legendarios y los Akatsuki, ya que se desvelarán
+                    los rostros de los miembros poco a poco.</div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="panel" title="Información" id="page_10" data-appbuilder-object="page"
+        style="" data-nav="nav_0">
+
+
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/Anime.jpg" style="width: 285px; height: 200px;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="">"La palabra anime (アニメ?) fue tomada en Japón para nombrar a un
+                    estilo de animación, surgido en ese país. Es el término que
+                    identifica a la animación de procedencia japonesa. Su origen
+                    es discutido, se cree que el término anime proviene de la abreviación
+                    de la transcripción japonesa de la palabra inglesa "animation"
+                    (アニメーション animēshon). De ahí que se abrevie a "anime". Por otra
+                    parte se cree que es una palabra de origen francés. El anime
+                    es un medio de gran expansión en Japón, siendo al mismo tiempo
+                    un producto de entretenimiento comercial y cultural, lo que
+                    ha ocasionado un fenómeno cultural en masas populares y una
+                    forma de arte tecnológico. Es potencialmente dirigido a todos
+                    los públicos, desde niños, adolescentes, adultos, hasta especializaciones
+                    de clasificación esencialmente tomada de la existente para
+                    el "manga" (historieta japonesa), con clases base diseñadas
+                    para especificaciones socio-demográficos tales como empleados,
+                    amas de casa, estudiantes, etc. Por lo tanto, pueden hacer
+                    frente a los sujetos, temas y géneros tan diversos como el
+                    amor, aventura, ciencia ficción, cuentos infantiles, literatura,
+                    deportes, fantasía, erotismo y muchos otros."
+                    <br>
+                    <br>por: Ricardo Hernandez Santos</div>
+            </div>
+        </div>
+        <div class="panel" title="Series" id="page_11" data-appbuilder-object="page" style=""
+        data-nav="nav_0">
+            <ul class="list" data-appbuilder-object="list" style="z-index: 0;">
+                <li><a href="#page_1">One piece</a> 
+                </li>
+                <li><a href="#page_2">Dead Note</a>
+                </li>
+                <li><a href="#page_3">Naruto Shipuden</a>
+                </li>
+                <li><a href="#page_7">Bleach</a>
+                </li>
+                <li><a href="#page_9">Fairy Tail</a>
+                </li>
+                <li><a href="#page_13">Tu Love ru</a>
+                </li>
+                <li><a href="#page_14">Detective Conan</a>
+                </li>
+                <li><a href="#page_15">Strike the blood</a>
+                </li>
+                <li><a href="#page_16">Sword Art Online</a>
+                </li>
+                <li><a href="#page_17">The Skull Man</a>
+                </li>
+                <li><a href="#page_18">Hunter x Hunter</a>
+                </li>
+                <li><a href="#page_19">Full Metal Panic</a>
+                </li>
+                <li><a href="#page_20">Full Metal Alchemist</a>
+                </li>
+                <li><a href="#page_21">Full Metal Alchemist Brootherhood</a>
+                </li>
+                <li><a href="#page_22">Devil May Cry</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Paginas" id="page_12" data-appbuilder-object="page" style=""
+        data-nav="nav_0">
+
+
+
+            <div class="container" style="width: 100%; height: 200%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+
+                <a class="button" href="http://animeflv.net" style="background-image: url(images/animeflv.png); background-size: 299px; height: 130px; width: 100%; position: relative; z-index: 2; margin: 0px auto;"
+                data-appbuilder-object="button" data-transition="flip"></a>
+                <a class="button" href="http://jkanime.net/" style="background-image: url(images/jkanime.jpg); background-size: 290px; height: 72px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+                data-appbuilder-object="button" data-transition="up"></a>
+                <a class="button" href="http://todoanimes.com/" style="background-image: url(images/todoanimes.png); background-size: 290px; height: 120px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+                data-appbuilder-object="button" data-transition="slide"></a>
+                <a class="button" href="http://www.animeid.tv/" style="background-image: url(images/animeid.png); background-size: 290px; height: 120px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+                data-appbuilder-object="button" data-transition="slide"></a>
+                <a class="button" href="www.vanime.net/" style="background-image: url(images/vanimes2.jpg); background-size: 290px; height: 100px; width: 100%; position: relative; z-index: 2;"
+                data-appbuilder-object="button" data-transition="slide"></a>
+                <div class="grid" data-appbuilder-object="grid13" style="">
+
+
+                </div>
+
+                <a class="button" href="#" style="background-image: url(images/elanime.png); background-size: 290px; height: 50px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+                data-appbuilder-object="button" data-transition="slide"></a>
+                <a class="button" href="#" style="background-image: url(images/reyanime.png); background-size: 290px; height: 50px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+                data-appbuilder-object="button" data-transition="slide" id=""></a>
+            </div>
+        </div>
+        <div class="panel" title="Bleach" id="page_7" data-appbuilder-object="page" style=""
+        data-footer="footer_4" data-nav="nav_0">
+            <img src="images/bleach.jpg" style="width: 298px; height: 350px;" alt="Title" data-appbuilder-object="image"
+            class="" title="">
+            <div class="text_item" data-appbuilder-object="text">La serie narra las aventuras de Ichigo Kurosaki, un estudiante de quince
+                años que tiene la facultad de interactuar con los espíritus. Una
+                noche, Ichigo se encuentra con una shinigami llamada Rukia Kuchiki;
+                ella se sorprende por su habilidad para poder verla. Sin embargo,
+                su conversación es interrumpida por la aparición de un hollow,
+                un espíritu maligno. Después de que Rukia fuera gravemente herida
+                al tratar de proteger a Ichigo, ésta intenta traspasarle la mitad
+                de sus poderes a Ichigo para que pueda enfrentarse al hollow en
+                igualdad de condiciones. No obstante, Ichigo sin darse cuenta los
+                absorbe casi por completo, y logra vencer con facilidad al espíritu.
+                Al día siguiente, Rukia aparece en la clase de Ichigo como una
+                humana de apariencia normal, y le informa que debido a que ha absorbido
+                todos sus poderes no puede regresar a su mundo hasta que los recupere.
+                Entretanto, Ichigo acoge a Rukia en su casa y toma su trabajo de
+                shinigami, defendiendo a los seres humanos de los hollows y orientando
+                a las almas buenas después de la muerte a un lugar llamado la Sociedad
+                de Almas, lugar donde además viven los shinigami.</div>
+        </div>
+        <div class="panel" title="" id="page_8" data-appbuilder-object="page" style=""></div>
+        <div class="panel" title="Fairy Tail" id="page_9" data-appbuilder-object="page"
+        style="" data-footer="footer_5" data-nav="nav_0">
+            <img src="images/fairy.jpg" style="width: 290px; height: 330px;" alt="Title" data-appbuilder-object="image"
+            class="" title="">
+            <div class="text_item" data-appbuilder-object="text" style="">Fairy Tail cuenta la historia de un joven mago llamado Natsu en la
+                búsqueda de su maestro y padre adoptivo Igneel que resulta ser
+                un dragón. Por ello se unió a Fairy Tail, un gremio de magos que
+                es famoso por los destrozos y daños que provocan en diversas ciudades
+                (lo cual no debería ser así). El mundo de Fairy Tail gira alrededor
+                de los magos (los cuales poco tienen que ver con la idea general
+                del mago común) que realizan encargos a cambio de dinero, similar
+                a un cazarecompensas. Natsu conoce a Lucy, una guapa muchacha cuyo
+                sueño era ingresar a un gremio de magos, específicamente, a Fairy
+                Tail, lo cual consigue gracias a la ayuda de Natsu. De ahí en adelante,
+                la historia sigue los movimientos de esta pareja de magos los cuales
+                se ven envueltos en un sin número de aventuras antes de conseguir
+                la meta final de encontrar a Igneel. fairy tail</div>
+        </div>
+        <div class="panel" title="Love One" id="page_11" data-appbuilder-object="page"
+        style=""></div>
+        <div class="panel" title="" id="page_11" data-appbuilder-object="page" style=""></div>
+        <div class="panel" title="Love One" id="page_12" data-appbuilder-object="page"
+        style=""></div>
+        <div class="panel" title="Tu Love ru" id="page_13" data-appbuilder-object="page"
+        style="" data-nav="nav_0" data-footer="footer_6">
+            <img src="images/tolove.jpg" style="width: 298px; height: 310px;" alt="Title" data-appbuilder-object="image"
+            class="" title="">
+            <div class="text_item" data-appbuilder-object="text">La historia trata de Yuuki Rito, un muchacho de secundaria que no puede
+                confesarse a la chica de sus sueños, Haruna Sairenji. Un día, al
+                volver a casa y estando en la bañera, una misteriosa chica desnuda,
+                aparece de la nada. Su nombre es Lala y ella viene del planeta
+                Deviluke, donde ella es la heredera al trono. Su padre quiere que
+                ella vuelva a su planeta natal para así poder casarse con uno de
+                los candidatos a marido, pero ella decide que quiere casarse con
+                Rito para permanecer en la Tierra.</div>
+        </div>
+        <div class="panel" title="Detective Conan" data-nav="nav_0" id="page_14" data-appbuilder-object="page"
+        style="" data-footer="footer_7">
+            <img src="images/conan.jpg" style="width: 298px; height: 298px;" alt="Title" data-appbuilder-object="image"
+            class="" title="">
+            <div class="text_item" data-appbuilder-object="text">La historia habla sobre Shinichi Kudo, un joven detective de 17 años
+                que tiene asombrada a la policía ya que resuelve los casos que
+                se le presentan con suma brillantez y siempre esclareciendo los
+                hechos correctamente. Un día, Shinichi lleva a Ran Mouri, su amiga
+                de la infancia, a un parque de atracciones, el Myracle Land. Tras
+                un asesinato en la montaña rusa, Shinichi presencia una transacción
+                sospechosa con unos hombre de negro eso, pero no se percata de
+                uno de ellos y lo golpea y le hacen tragar una droga en estado
+                de prueva, la APTX4869, una droga que, supuestamente, lo mataría
+                y no dejaria rastro de ella en la autopsia; pero la droga falla
+                y sólo le hace encoger su cuerpo hasta la edad aproximada de siete
+                años.
+            </div>
+        </div>
+        <div class="panel" title="Strike the blood" data-nav="nav_0" id="page_15" data-appbuilder-object="page"
+        style="" data-footer="footer_8">
+            <img src="images/striketheblood.jpg" style="width: 290px; height: 310px; z-index: 0;"
+            alt="Title" data-appbuilder-object="image" class="" title="">
+            <div class="text_item" data-appbuilder-object="text">El cuarto primogénito - Es el vampiro más fuerte del mundo que debería
+                existir sólo en leyendas. Acompañado por doce Kenjuu y exparciendo
+                la calamidad, este vampiro fantasma apareció en Japón. Para la
+                observación y la destrucción de este Cuarto Primogénito, el gobierno
+                decidió enviar a una Sword Shaman. Sin embargo, por alguna razón,
+                la elegida para la misión era un aprendiz joven Sword Shaman, Himegari
+                Yukina.
+            </div>
+        </div>
+        <div class="panel" title="Sword Art Online" data-nav="nav_0" id="page_16" data-appbuilder-object="page"
+        style="" data-footer="footer_9">
+            <img src="images/swordArtOnline.jpg" style="width: 298px; height: 350px; z-index: 0;"
+            alt="Title" data-appbuilder-object="image" class="" title="">
+            <div class="text_item" data-appbuilder-object="text">Your text here</div>
+        </div>
+        <div class="panel" title="The Skull Man" data-nav="nav_0" id="page_17" data-appbuilder-object="page"
+        style="" data-footer="footer_10">
+            <img src="images/theskullman.jpg" style="width: 298px; height: 350px;" alt="Title"
+            data-appbuilder-object="image" class="" title="">
+            <div class="text_item" data-appbuilder-object="text">La historia trata de un periodista llamado Hayato Mikogami que regresa
+                a su ciudad natal a Otomo para investigar los rumores de extraños
+                asesinatos realizada por un hombre que lleva una mascara de craneo
+                (Skull Man).</div>
+        </div>
+        <div class="panel" title="Hunter x Hunter" data-nav="nav_0" id="page_18" data-appbuilder-object="page"
+        style="" data-footer="footer_11">
+            <img src="images/hunter-xhunter.jpg" style="width: 298px; height: 350px;" alt="Title"
+            data-appbuilder-object="image" class="" title="">
+            <div class="text_item" data-appbuilder-object="text">Gon Frecks,un niño de 12 años,vive con su tia Mito_san y su abuela
+                en Isla Ballena,hunerfano de madre y segun su tia tambien de su
+                padre.Un dia Gon es atacado por un oso del bosque,pero es salvado
+                x un cazador quien le explica que esta en busca de su maestro para
+                asi convertirse en un cazador,el es quien le dice que su padre
+                Gin esta vivo. Enterado de esto Gon decide convertirse en cazador
+                para poder encontrar a su padre.</div>
+        </div>
+        <div class="panel" title="Full Metal Panic" data-nav="nav_0" id="page_19" data-appbuilder-object="page"
+        style="" data-footer="footer_12">
+            <img src="images/fulmetalpanic.jpg" style="width: 298px; height: 350px;" alt="Title"
+            data-appbuilder-object="image" class="" title="">
+            <div class="text_item" data-appbuilder-object="text">La historia comienza cuando Mithril, una organización de mercenarios
+                que existe para mantener la paz mundial, se entera que una estudiante
+                japonesa de nombre Kaname Chidori es el próximo blanco de la KGB
+                (una de tantas organizaciones terroristas que la quieren capturar),
+                ya que la han identificado como una posible "whispered". Entonces
+                mandan un escudaron para protegerla, siendo el más competente Sagara
+                Sousuke. Es entonces cuando la historia se torna cómica cuando
+                el joven soldado Sagara interactúa con gente civil y normal, claro
+                sin olvidarse de la trama y los enfrentamientos que suceden entre
+                Mithril y sus misteriosos enemigos.</div>
+        </div>
+        <div class="panel" title="Full Metal Alchemist Brootherhood" data-nav="nav_0" id="page_20"
+        data-appbuilder-object="page" style="" data-footer="footer_13">
+            <img src="images/full-metal-alchemist-shintetsu.jpg" style="width: 298px; height: 350px;"
+            alt="Title" data-appbuilder-object="image" class="" title="">
+            <div class="text_item" data-appbuilder-object="text">La historia se centra en dos hermanos, Edward Elric y Alphonse Elric
+                que rompieron el mayor tabú de la alquimia, la trasmutación humana
+                al tratar de revivir a su fallecida madre; en consecuencia Edward
+                pierde su pierna izquierda y Alphonse pierde todo su cuerpo, Edward
+                para salvar a su hermano sella su alma en una gran armadura de
+                hierro a cambio de su brazo derecho; ahora los dos con un nuevo
+                objetivo buscan desesperadamente la piedra filosofal para poder
+                regresar sus cuerpos a la normalidad... full metal alchemist shintetsu</div>
+        </div>
+        <div class="panel" title="" data-nav="nav_0" id="page_21" data-appbuilder-object="page"
+        style=""></div>
+        <div class="panel" title="Devil May Cry" data-nav="nav_0" id="page_22" data-appbuilder-object="page"
+        style="" data-footer="footer_14">
+            <img src="images/devilmaycry.jpg" style="width: 298px; height: 350px;" alt="Title"
+            data-appbuilder-object="image" class="" title="">
+            <div class="text_item" data-appbuilder-object="text">Devil May Cry sigue la historia del cazador de demonios conocidos como
+                Dante. Como medio demonio, mitad humano, que utiliza su fiel espada
+                Rebellion y sus dos pistolas Ebony and Ivory para asumir misiones.
+                Dante posee y dirige "Devil May Cry", una empresa que se especializa
+                en la caza y muerte de los problemas relacionados con demonios.</div>
+        </div>
+        <div class="panel" title="Mangas" data-nav="nav_0" id="page_23" data-appbuilder-object="page"
+        style="">
+            <a class="button" href="http://esmangaonline.com/" style="background-image: url(images/crosso.svg); background-size: 290px; height: 100px; width: 100%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+            data-appbuilder-object="button" data-transition="slide"></a>
+            <a class="button" href="http://esmangaonline.com/onepiece/" style="background-image: url(images/onepiece.jpg); background-size: 100px; height: 148px; width: 32%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+            data-appbuilder-object="button" data-transition="slide"></a>
+            <a class="button" href="http://esmangaonline.com/naruto/" style="background-image: url(images/naruto.jpg); background-size: 100px; height: 148px; width: 32%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+            data-appbuilder-object="button" data-transition="slide"></a>
+            <a class="button" href="http://esmangaonline.com/fairytail/" style="background-image: url(images/fairy-tail.jpg); background-size: 100px; height: 148px; width: 32%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+            data-appbuilder-object="button" data-transition="slide"></a>
+            <div class="text_item" data-appbuilder-object="text" style="z-index: 0;">One Piece---------Naruto------- Fairy tail</div>
+            <a class="button" href="http://esmangaonline.com/btooom%21/" style="background-image: url(images/Btooom!.jpg); background-size: 90px; height: 148px; width: 32%; position: relative; z-index: 2;"
+            data-appbuilder-object="button" data-transition="slide"></a>
+            <a class="button" href="#" style="background-image: url(images/bleach.jpg); background-size: 90px; height: 148px; width: 32%; position: relative; z-index: 2;"
+            data-appbuilder-object="button" data-transition="slide"></a><a class="button" href="http://esmangaonline.com/hunter-x-hunter/"
+            style="background-image: url(images/hunterxhunter.jpg); background-size: 100px; height: 148px; width: 32%; position: relative; z-index: 2; background-repeat: no-repeat no-repeat;"
+            data-appbuilder-object="button" data-transition="slide" id="">Button</a>
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <div class="text_item" data-appbuilder-object="text">Btooom!--------Bleach------Hunter x Hunter</div>
+            </div>
+        </div>
+    </div>
+    <div id="navbar" class="footer"> <a href="#home" class="icon home">Inicio</a><a href="#page_10" class="icon user">Información</a>
+        <a href="#page_11" class="icon tv">Series</a><a href="#page_12" class="icon download">Páginas</a>
+        <a href="#page_23" class="icon stack">Mangas</a>
+    </div>
+    <header id="header_0" data-appbuilder-object="header">
+        <h1 id="pageTitle" class="">MEJORES ANIMES!!!</h1>
+    </header>
+
+
+
+    <footer id="footer_1" data-appbuilder-object="footer"><a href="#page_10" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_2" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_2" data-appbuilder-object="footer"><a href="#page_1" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_3" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_3" data-appbuilder-object="footer"><a href="#page_2" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_7" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_4" data-appbuilder-object="footer"><a href="#page_3" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_9" class="icon right">Siguente</a>
+    </footer>
+    <nav id="nav_0" data-appbuilder-object="nav">
+        <h1>Side Nav</h1> 
+    </nav>
+    <header id="header_1" data-appbuilder-object="header"> <a id="backButton" href="#" class="button">Back</a>
+        <h1 class="">Custom Title</h1> 
+    </header>
+    <footer id="footer_5" data-appbuilder-object="footer"><a href="#page_7" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_13" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_6" data-appbuilder-object="footer"><a href="#page_9" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_14" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_7" data-appbuilder-object="footer"><a href="#page_13" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_15" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_8" data-appbuilder-object="footer"><a href="#page_14" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_16" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_9" data-appbuilder-object="footer"><a href="#page_15" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_17" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_10" data-appbuilder-object="footer"><a href="#page_16" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_18" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_11" data-appbuilder-object="footer"><a href="#page_17" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_19" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_12" data-appbuilder-object="footer"><a href="#page_18" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_20" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_13" data-appbuilder-object="footer"><a href="#page_19" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_22" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_14" data-appbuilder-object="footer"><a href="#page_20" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_11" class="icon right">Siguiente</a>
+    </footer>
+</div>
+
+
+
+
+
+</html>
